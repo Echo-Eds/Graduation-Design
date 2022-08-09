@@ -1,0 +1,103 @@
+mp_restartgame 1 1秒后刷新游戏
+
+　　mp_autoteambalance 0/1 是否打开自动平衡
+
+　　mp_maxmoney 16000 最高金钱16000
+
+　　mp_roundtime 60 死亡竞赛的回合时间60分钟
+
+　　mp_roundtime_defuse 60 休闲/竞技模式每局时间60分钟
+
+　　mp_maxrounds 30 休闲/竞技模式最大局数设为30局
+
+　　mp_startmoney 16000 出生金钱为16000
+
+　　mp_buytime 15 开局购买时间15秒
+
+　　mp_buy_anywhere 1 在任意地点都能购买武器
+
+　　mp_freezetime 0 每局出生原地冻结时间0秒
+
+　　mp_friendlyfire 0/1 关闭/开启友军伤害
+
+　　mp_limitteams 2 双方人数差异最多为2人
+
+　　maxplayers 16 地图最大玩家数（包括机器人）
+
+　　mp_c4timer 45 C4引爆时间45秒
+
+　　map de_inferno 切换地图为de_inferno（炼狱小镇）
+
+　　maps 列出该服务器所有地图
+
+　　mp_display_kill_assists 0/1 关闭/开启助攻显示
+
+　　mp_overtime_enable 0/1 是否允许打加时赛
+
+　　mp_randomspawn 0/1 是否基地为出生点
+
+　　mp_teammates_are_enemies 0/1 死斗模式/死亡模式
+
+　　mp_respawn_on_death_t 0/1
+
+　　mp_respawn_on_death_ct 0/1
+
+　　sv_password 123 设置服务器密码为123
+
+　　exec gamemode_模式 切换游戏模式
+
+　有关个人训练/团队跑图的指令：
+
+　　sv_cheats 0/1 关闭/开启作弊功能（以下功能只有在sv_cheats为1时才能使用）
+
+　　bind v“noclip” 绑定“滚轮按钮”为“飞行模式”的快捷键
+
+　　sv_infiniteammo 0/1 弹药及投掷物有限/无限
+
+　　sv_grenade_trajectory 0/1 关闭/显示投掷物飞行轨迹
+
+　　sv_showimpacts 0/1 关闭/显示被击中者hitbox的状态
+
+　　give weapon_hegrenade 获取一枚手雷
+
+　　give weapon_flashbang 获取一枚闪光震撼弹
+
+　　give weapon_smokegrenade 获取一枚烟雾弹
+
+首先，在控制台输入sv_cheats 1，打开作弊模式，sv_showimpacts 显示弹痕，nocli穿墙模式，
+建议使用bind v "noclip"绑定按键，则按v键为开启穿墙模式；
+sv_infinite_ammo 无限武器弹药mp_roundtime_defuse 9回合时间sv_grenade_trajectory 手雷轨迹
+
+sv_cheats 0/1 （关闭/开启作弊功能 以下有些功能需要sv_cheats 为1才能用）
+fps_max 100 （限制最高FPS为100 降低电脑负担 只能在退出服务器后的主菜单使用）
+mp_restartgame 1 （1秒后刷新游戏）mp_autoteambalance 0/1 （是否打开自动平衡）
+mp_maxmoney 16000 （最高金钱16000）mp_startmoney 16000 （出生金钱16000）
+mp_freezetime 7 （地图冻结时间7秒）mp_limitteams 2 （双方人数差异最大2人）
+maxplayers 10 （地图最大玩家数）bot_freeze 0/1 （冻结电脑）
+
+sv_cheats 1;
+
+sv_showimpacts 1;
+
+bind x "noclip;
+
+sv_grenade_trajectory 1;
+
+mp_maxmoney 16000;
+
+mp_roundtime_defuse 60;
+
+bind "F1" sv_rethrow_last_grenade;
+
+sv_infiniteammo 1;
+
+sv_grenade_trajectory 1;
+
+mp_buytime 99999;
+mp_buy_anywhere 1;
+mp_freezetime 0;
+
+
+
+rpm -ivh webmin
+netstat -antl

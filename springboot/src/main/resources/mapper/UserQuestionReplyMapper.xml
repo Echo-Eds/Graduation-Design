@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot.demo.mapper.UserQuestionReplyMapper">
+
+<!--    查询当前提问的所有回复-->
+    <select id="getRep" resultType="com.springboot.demo.pojo.UserQuestionReply">
+    SELECT *
+    FROM
+    user_question_reply
+    INNER JOIN user_question ON user_question_reply.question_id = user_question.id
+    WHERE
+    user_question_reply.question_id = user_question.id AND
+    user_question_reply.question_id = #{questionID}
+    </select>
+    <select id="getAllMyReply" resultType="com.springboot.demo.pojo.UserQuestionReply">
+        SELECT * FROM `user_question_reply` WHERE professor_id = 1
+    </select>
+</mapper>

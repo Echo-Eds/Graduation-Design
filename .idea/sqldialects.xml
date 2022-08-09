@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/CartMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/MedicineResourceMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/OrdersMedicineMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/ProfessorMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/SkillsTrainingMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/UserCollectionMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/UserQuestionMapper.xml" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/springboot/src/main/resources/mapper/UserQuestionReplyMapper.xml" dialect="GenericSQL" />
+  </component>
+</project>

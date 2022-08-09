@@ -1,0 +1,15 @@
+ @Resource
+    UserMapper userMapper;
+@PutMapping("/updatemyinfo")
+    public Result<?> updateMyInfo(@RequestBody User user) {
+        userMapper.updateById(user);
+        return Result.success(user);
+    }
+ userShoppingAddressMapper.insert(userShoppingAddress);
+        return Result.success();
+LambdaQueryWrapper<UserShoppingAddress> wrapper = Wrappers.<UserShoppingAddress>lambdaQuery();
+        //查询所有id为当前用户的收货地址
+        Page<UserShoppingAddress> userShoppingAddressPage =
+                userShoppingAddressMapper.selectPage(new Page<>(pageNum, pageSize),
+                        wrapper.eq(UserShoppingAddress::getUserid, userId));
+        return Result.success(userShoppingAddressPage);

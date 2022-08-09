@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot.demo.mapper.UserCollectionMapper">
+
+    <select id="getUserCollection" resultType="com.springboot.demo.pojo.UserQuestion">
+        SELECT
+        user_question.time,
+        user_question.title,
+        user_question.id
+        FROM
+        user_question
+        INNER JOIN user_collection ON user_collection.title_id = user_question.id
+        WHERE
+        user_collection.title_id = user_question.id AND
+        user_collection.user_id = #{userId}
+    </select>
+</mapper>

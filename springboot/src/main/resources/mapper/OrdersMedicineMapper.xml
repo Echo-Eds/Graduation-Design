@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot.demo.mapper.OrdersMedicineMapper">
+    <resultMap  id="OrdersMedicineVo" type="com.springboot.demo.pojo.vo.OrdersMedicineVo">
+        <id column="medicine_id" property="medicineId"/>
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="name" property="name"/>
+        <result column="icon_path" property="iconPath"/>
+        <result column="type" property="type"/>
+        <result column="medicine_num" property="medicineNum" />
+    </resultMap>
+    <select id="getOrderMedicineList" resultMap="OrdersMedicineVo">
+        SELECT
+        orders_medicine.medicine_id,
+        medicine_info.`name`,
+        medicine_info.price,
+        medicine_info.icon_path,
+        medicine_info.type,
+        orders_medicine.medicine_num
+        FROM
+        medicine_info
+        INNER JOIN orders_medicine ON orders_medicine.medicine_id = medicine_info.id
+        INNER JOIN orders ON orders_medicine.order_no = orders.`no`
+        WHERE
+        orders_medicine.order_no = #{orderNo}
+    </select>
+    <select id="getOrderStatus" resultType="com.springboot.demo.pojo.Orders">
+        SELECT
+        orders.`no`,
+        orders.total_price,
+        orders.state,
+        orders.time,
+        orders.address
+        FROM `orders`
+        WHERE
+        orders.`no` = #{orderId}
+    </select>
+</mapper>

@@ -1,0 +1,6 @@
+YY: 30431231 流链接去小破站 
+同步不好就下载potplayer 把流放里面 
+流链接：https://c1--cn-gotcha208.bilivideo.com/live-bvc/685084/live_474595625_59754158_bluray/index.m3u8?expires=1652093582&len=0&oi=0x24098a506a337880518a9462ee1af2e0&pt=web&qn=10000&trid=100790c34311b2594abaa66c175a6e87e50b&sigparams=cdn,expires,len,oi,pt,qn,trid&cdn=cn-gotcha208&sign=8e0a383e049a8e850d380f373d81329e&sk=f8acd4e1a7cb2b4d12352fc9ce9e184f&p2p_type=1&src=57345&sl=1&free_type=0&flowtype=0&machinezone=ylf&source=onetier&order=1&site=3a43e9ceb08ce75dbdf24e4e9d296469
+自动刷新就把流放pot player
+
+医药资源部分改下载

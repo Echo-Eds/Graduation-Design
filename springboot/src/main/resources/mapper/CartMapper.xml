@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.springboot.demo.mapper.CartMapper">
+
+    <resultMap  id="CartVo" type="com.springboot.demo.pojo.vo.CartVo">
+        <id column="id" property="id"/>
+        <result column="medicine_id" property="medicineId"/>
+        <result column="user_id" property="userID"/>
+        <result column="medicine_num" property="medicineNum"/>
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="icon_path" property="iconPath"/>
+    </resultMap>
+    <select id="selectMyCart" resultMap="CartVo">
+        SELECT
+        cart.id,
+        cart.medicine_id,
+        cart.user_id,
+        cart.medicine_num,
+        medicine_info.`name`,
+        medicine_info.price,
+        medicine_info.icon_path
+        FROM
+        cart
+        INNER JOIN medicine_info ON cart.medicine_id = medicine_info.id
+        WHERE
+        cart.medicine_id = medicine_info.id AND
+        cart.user_id = #{userId}
+    </select>
+
+    <select id="selectAll" resultType="com.springboot.demo.pojo.vo.CartManagementVo">
+        SELECT
+        cart.id,
+        cart.medicine_id,
+        cart.user_id,
+        cart.medicine_num,
+        medicine_info.`name`,
+        medicine_info.price,
+        medicine_info.icon_path,
+        `user`.username,
+        `user`.sex,
+        `user`.age,
+        medicine_info.type
+        FROM
+        cart
+        INNER JOIN medicine_info ON cart.medicine_id = medicine_info.id
+        INNER JOIN `user` ON cart.user_id = `user`.id
+    </select>
+    <!--    <update id="updateNum" >-->
+<!--        update cart set medicine_num = #{medicineNum} where medicine_id = #{medicineId} and user_id = #{userId}-->
+<!--    </update>-->
+
+</mapper>
